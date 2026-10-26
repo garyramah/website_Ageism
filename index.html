@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ageism Awareness</title>
+    <style>
+      :root {
+        --bg: #f7f3ee;
+        --panel: #ffffff;
+        --accent: #b85c38;
+        --accent-dark: #8e4227;
+        --text: #1d1d1d;
+        --muted: #5b5b5b;
+        --soft: #efe2d6;
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background: linear-gradient(180deg, #f7f3ee 0%, #f2e7de 100%);
+        color: var(--text);
+        line-height: 1.6;
+      }
+
+      header {
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(8px);
+        position: sticky;
+        top: 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+      }
+
+      nav {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 1rem 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .brand {
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: var(--text);
+        letter-spacing: 0.04em;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 1.2rem;
+        flex-wrap: wrap;
+      }
+
+      .nav-links a {
+        text-decoration: none;
+        color: var(--muted);
+        font-weight: 600;
+      }
+
+      .hero {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 5rem 1.5rem 3rem;
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 2rem;
+        align-items: center;
+      }
+
+      .eyebrow {
+        display: inline-block;
+        background: var(--soft);
+        color: var(--accent-dark);
+        padding: 0.4rem 0.8rem;
+        border-radius: 999px;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        font-size: 0.75rem;
+      }
+
+      h1 {
+        font-size: clamp(2.6rem, 5vw, 4.2rem);
+        line-height: 1.05;
+        margin: 0 0 1rem;
+      }
+
+      .lead {
+        font-size: 1.1rem;
+        color: var(--muted);
+        max-width: 620px;
+        margin-bottom: 1.5rem;
+      }
+
+      .actions {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+
+      .button {
+        display: inline-block;
+        padding: 0.9rem 1.4rem;
+        border-radius: 999px;
+        text-decoration: none;
+        font-weight: 700;
+        transition: 0.2s ease;
+      }
+
+      .button.primary {
+        background: var(--accent);
+        color: white;
+      }
+
+      .button.primary:hover {
+        background: var(--accent-dark);
+      }
+
+      .button.secondary {
+        background: transparent;
+        color: var(--text);
+        border: 2px solid rgba(0,0,0,0.1);
+      }
+
+      .card {
+        background: var(--panel);
+        border-radius: 24px;
+        padding: 2rem;
+        box-shadow: 0 20px 40px rgba(60, 30, 20, 0.08);
+      }
+
+      .stats {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1rem;
+        margin-top: 1.5rem;
+      }
+
+      .stat {
+        background: #fffaf7;
+        border: 1px solid #f0d9cc;
+        border-radius: 16px;
+        padding: 1rem;
+      }
+
+      .stat strong {
+        display: block;
+        font-size: 1.6rem;
+        color: var(--accent-dark);
+      }
+
+      .stat span {
+        font-size: 0.9rem;
+        color: var(--muted);
+      }
+
+      .section {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 2rem 1.5rem 4rem;
+      }
+
+      .section h2 {
+        text-align: center;
+        font-size: clamp(2rem, 3vw, 2.8rem);
+        margin-bottom: 0.8rem;
+      }
+
+      .section-intro {
+        text-align: center;
+        max-width: 700px;
+        margin: 0 auto 2rem;
+        color: var(--muted);
+      }
+
+      .features {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1.5rem;
+      }
+
+      .feature {
+        background: rgba(255,255,255,0.75);
+        border: 1px solid rgba(0,0,0,0.05);
+        border-radius: 18px;
+        padding: 1.5rem;
+      }
+
+      .feature .icon {
+        width: 48px;
+        height: 48px;
+        display: grid;
+        place-items: center;
+        border-radius: 12px;
+        background: var(--soft);
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+      }
+
+      .feature h3 {
+        margin: 0 0 0.6rem;
+      }
+
+      .feature p {
+        margin: 0;
+        color: var(--muted);
+      }
+
+      .cta {
+        max-width: 1100px;
+        margin: 0 auto 4rem;
+        padding: 0 1.5rem;
+      }
+
+      .cta-box {
+        background: linear-gradient(135deg, var(--accent-dark), var(--accent));
+        color: white;
+        padding: 2.2rem 2rem;
+        border-radius: 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      .cta-box h3 {
+        margin: 0 0 0.3rem;
+        font-size: clamp(1.5rem, 2vw, 2.2rem);
+      }
+
+      .cta-box p {
+        margin: 0;
+        color: rgba(255,255,255,0.85);
+      }
+
+      footer {
+        text-align: center;
+        color: var(--muted);
+        padding: 1rem 1.5rem 2.5rem;
+      }
+
+      @media (max-width: 800px) {
+        .hero,
+        .features,
+        .stats,
+        .cta-box {
+          grid-template-columns: 1fr;
+          display: grid;
+        }
+
+        .cta-box {
+          text-align: center;
+          justify-items: center;
+        }
+
+        nav {
+          flex-direction: column;
+          gap: 0.8rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="brand">AGEISM</div>
+        <div class="nav-links">
+          <a href="#about">About</a>
+          <a href="#impact">Impact</a>
+          <a href="#resources">Resources</a>
+          <a href="#join">Join</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div>
+          <div class="eyebrow">Challenge age bias</div>
+          <h1>Age should never limit opportunity.</h1>
+          <p class="lead">
+            We stand against stereotypes that reduce people based on age and work toward
+            a future where experience, talent, and dignity are valued at every stage of life.
+          </p>
+          <div class="actions">
+            <a href="#join" class="button primary">Take Action</a>
+            <a href="#about" class="button secondary">Learn More</a>
+          </div>
+
+          <div class="stats">
+            <div class="stat">
+              <strong>1 in 3</strong>
+              <span>people report age-based discrimination</span>
+            </div>
+            <div class="stat">
+              <strong>All Ages</strong>
+              <span>bias affects youth and older adults alike</span>
+            </div>
+            <div class="stat">
+              <strong>Change</strong>
+              <span>through awareness, respect, and action</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2>Why this matters</h2>
+          <p>
+            Ageism can show up in hiring, education, healthcare, media, and everyday relationships.
+            It often goes unnoticed because it is treated as “normal” or “just a joke,” but it harms people and communities.
+          </p>
+          <ul>
+            <li>Limits opportunities for learning and work</li>
+            <li>Creates unnecessary stereotypes</li>
+            <li>Reduces dignity, trust, and belonging</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section" id="about">
+        <h2>What we believe</h2>
+        <p class="section-intro">
+          Everyone deserves to be seen for their capabilities, not judged by assumptions tied to age.
+        </p>
+
+        <div class="features">
+          <div class="feature">
+            <div class="icon">✨</div>
+            <h3>Respect</h3>
+            <p>We value people across generations and reject labels that reduce their humanity.</p>
+          </div>
+
+          <div class="feature">
+            <div class="icon">🤝</div>
+            <h3>Inclusion</h3>
+            <p>We build communities where voices, ideas, and experience are welcomed at every age.</p>
+          </div>
+
+          <div class="feature">
+            <div class="icon">📣</div>
+            <h3>Awareness</h3>
+            <p>We challenge stereotypes, educate others, and encourage fair treatment in everyday life.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="impact">
+        <h2>Ageism affects everyone</h2>
+        <p class="section-intro">
+          Bias based on age can limit participation, confidence, and opportunity across the entire lifespan.
+        </p>
+      </section>
+
+      <section class="cta" id="join">
+        <div class="cta-box">
+          <div>
+            <h3>Stand up against age-based unfairness.</h3>
+            <p>Start by speaking up, listening well, and creating space for every generation.</p>
+          </div>
+          <a href="mailto:hello@ageism-awareness.org" class="button secondary" style="background: white; color: var(--accent-dark); border: none;">Get Involved</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      © 2026 Ageism Awareness
+    </footer>
+  </body>
+</html>
