@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ageism.ai // The Worldwide Project Against Ageism</title>
+<meta name="description" content="One in two people worldwide are ageist. Ageism.ai documents ageism — and the AI that carries it — measures it, and organizes against it, worldwide.">
+<style>
+  :root{
+    --paper:#fbf7f0; --panel:#ffffff; --line:#e5ddd0;
+    --ink:#201a15; --text:#4a4238; --dim:#8a8073;
+    --accent:#0f766e; --accent-dim:#bfe3de;
+    --serif:Georgia,"Times New Roman",serif;
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+    --mono:"SF Mono",Menlo,Consolas,"Courier New",monospace;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--paper);color:var(--text);font-family:var(--sans);line-height:1.65;padding:0 1.5rem 3rem}
+  .wrap{max-width:1020px;margin:0 auto}
+  header{border-bottom:1px solid var(--line);padding:1.6rem 0;display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;flex-wrap:wrap}
+  .wordmark{font-family:var(--serif);font-size:1.7rem;font-weight:700;letter-spacing:-.01em;color:var(--ink)}
+  .wordmark span{color:var(--accent)}
+  .tagline{font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:var(--dim);margin-top:.2rem}
+  .badge{font-family:var(--mono);font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);border:1px solid var(--accent-dim);padding:.4rem .7rem;white-space:nowrap}
+  .hero{padding:4rem 0 2.5rem;max-width:780px}
+  .eyebrow{font-family:var(--mono);font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:1.2rem}
+  h1{font-family:var(--serif);color:var(--ink);font-size:clamp(2.2rem,5vw,3.6rem);line-height:1.12;letter-spacing:-.01em;margin-bottom:1.4rem}
+  h1 span{color:var(--accent)}
+  .lead{font-size:1.15rem;max-width:700px}
+  .lead b{color:var(--ink)}
+  h2{font-family:var(--serif);color:var(--ink);font-size:1.7rem;margin:3.5rem 0 .5rem}
+  .sub{font-size:1.02rem;max-width:700px;margin-bottom:1.6rem}
+  .statband{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:2rem 0}
+  @media(max-width:760px){.statband{grid-template-columns:1fr}}
+  .stat{background:var(--panel);border:1px solid var(--line);padding:1.4rem}
+  .stat .big{font-family:var(--serif);font-size:2.1rem;color:var(--accent);font-weight:700;line-height:1.1}
+  .stat p{font-size:.88rem;margin-top:.4rem}
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+  .grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+  @media(max-width:760px){.grid3,.grid2{grid-template-columns:1fr}}
+  .card{background:var(--panel);border:1px solid var(--line);padding:1.4rem}
+  .card h3{font-family:var(--serif);color:var(--ink);font-size:1.05rem;margin-bottom:.4rem}
+  .card p{font-size:.92rem}
+  .callout{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--accent);padding:1.6rem}
+  .callout p{font-size:.98rem;margin-bottom:.8rem}
+  .callout p:last-child{margin-bottom:0}
+  .callout b{color:var(--ink)}
+  .phase{display:flex;gap:1rem;background:var(--panel);border:1px solid var(--line);padding:1.5rem;margin-bottom:1rem}
+  .num{font-family:var(--mono);color:var(--accent);font-size:1.05rem;flex-shrink:0}
+  .phase h3{font-family:var(--serif);color:var(--ink);font-size:1.1rem;margin-bottom:.3rem}
+  .phase p{font-size:.93rem}
+  .cta{background:var(--ink);padding:2.4rem;text-align:center;margin-top:3.5rem}
+  .cta h3{font-family:var(--serif);color:#fff;font-size:1.5rem;margin-bottom:.5rem}
+  .cta p{color:#c9c2b6;max-width:500px;margin:0 auto 1.4rem;font-size:.95rem}
+  .cta form{display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap}
+  .cta input{padding:.7rem 1rem;border-radius:4px;border:1px solid #4a4238;background:#2a251f;color:#fff;min-width:240px;font-size:.95rem}
+  .btn{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;padding:.7rem 1.4rem;border-radius:4px;font-weight:600;font-size:.95rem;border:none;cursor:pointer}
+  .note{font-size:.78rem;color:#8a8073;margin-top:1rem}
+  .sources{font-size:.85rem;color:var(--dim);line-height:1.8;margin-top:2rem}
+  footer{margin-top:3rem;border-top:1px solid var(--line);padding-top:1.2rem;font-family:var(--mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--dim);display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div>
+      <div class="wordmark">AGEISM<span>.AI</span></div>
+      <div class="tagline">The worldwide project against ageism — and the AI that carries it</div>
+    </div>
+    <div class="badge">Global project</div>
+  </header>
+
+  <section class="hero">
+    <p class="eyebrow">World Health Organization, Global Report on Ageism, 2021</p>
+    <h1>One in two people worldwide <span>are ageist.</span></h1>
+    <p class="lead">Ageism is the most widespread, socially accepted prejudice on earth. It shortens lives, it costs billions, and it goes largely unchallenged. Now AI is carrying it across borders at machine speed — in hiring tools, credit models, triage systems, and media feeds. <b>Ageism.ai documents it, measures it, and organizes against it — worldwide.</b></p>
+  </section>
+
+  <div class="statband">
+    <div class="stat">
+      <div class="big">1 in 2</div>
+      <p>people worldwide are ageist against older people. In Europe, younger people report even more age discrimination than other age groups.</p>
+    </div>
+    <div class="stat">
+      <div class="big">7.5 years</div>
+      <p>of life lost to ageism: earlier death, poorer physical and mental health, slower recovery from disability.</p>
+    </div>
+    <div class="stat">
+      <div class="big">$63 billion</div>
+      <p>a year in the United States alone — one in every seven dollars spent on the eight most expensive health conditions.</p>
+    </div>
+  </div>
+
+  <h2>What ageism is</h2>
+  <p class="sub">The World Health Organization defines it in three parts: <b style="color:var(--ink)">stereotypes</b> (how we think), <b style="color:var(--ink)">prejudice</b> (how we feel), and <b style="color:var(--ink)">discrimination</b> (how we act) — toward others or oneself, based on age. The term was coined in 1969 by Robert Butler, building on the language of sexism and racism. It lives at three levels:</p>
+  <div class="grid3">
+    <div class="card">
+      <h3>Institutional</h3>
+      <p>Policies and practices that perpetuate stereotypes: healthcare rationed by age, hiring filtered by birth year, services denied by category. The rules themselves discriminate.</p>
+    </div>
+    <div class="card">
+      <h3>Interpersonal</h3>
+      <p>How people treat each other: patronizing speech, dismissed ideas, opportunities closed because someone is &ldquo;too young&rdquo; or &ldquo;too old.&rdquo; Children as young as four already absorb their culture&rsquo;s age stereotypes.</p>
+    </div>
+    <div class="card">
+      <h3>Self-directed</h3>
+      <p>What people internalize about their own age — self-limiting beliefs about what someone of a given age can be or do. Older people themselves can carry it, after a lifetime of hearing it.</p>
+    </div>
+  </div>
+  <p style="margin-top:1rem;font-size:.92rem">A note on language, which this project models: the WHO deliberately uses neutral terms — <i>older people</i>, not pejorative labels. Words carry the stereotypes they describe. This site chooses its words accordingly.</p>
+
+  <h2>The last socially acceptable prejudice</h2>
+  <p class="sub">Most organizations now have departments for racism and gender bias. Age bias is seldom on their radar — researchers call it the odd &ldquo;-ism&rdquo; in that it remains socially acceptable in many ways, from birthday cards that joke about getting older to memes that dismiss whole generations. The American Psychological Association adopted a resolution on ageism in 2020, recognizing age as a risk factor for discrimination. But the stereotypes underneath it are often simply false:</p>
+  <div class="grid2">
+    <div class="card">
+      <h3>Aging is not all decline</h3>
+      <p>Most older adults maintain good health and cognitive functioning. Some abilities slow; others hold or improve — older adults orient attention and ignore distractions better than midlife adults, and creativity can grow more generative later in life.</p>
+    </div>
+    <div class="card">
+      <h3>The paradox of aging</h3>
+      <p>Older people report greater happiness and life satisfaction than people in midlife — a U-shaped curve confirmed across 145 countries. People overestimate the problems of later life and underestimate its resilience.</p>
+    </div>
+  </div>
+  <p style="margin-top:1rem;font-size:.92rem">This is the new concept of aging the APA cover story describes: not rose-colored lenses, but rigorous science — aging as a transition with strengths, not a synonym for decline. The prejudice survives because the true story isn&rsquo;t told often enough.</p>
+
+  <h2>Why AI makes it worldwide</h2>
+  <div class="callout">
+    <p>Ageism was already global. AI makes it <b>exportable</b>. A hiring tool trained on ageist data doesn&rsquo;t stay in one country — it ships everywhere. A triage model, a credit model, a feed algorithm: each one carries the stereotypes it learned, applies them invisibly, and scales them to millions of decisions a day.</p>
+    <p>That is also why the old prejudice is newly hard to challenge. The WHO&rsquo;s description of ageism — <b>prevalent, ubiquitous, and insidious because it goes largely unrecognized and unchallenged</b> — now describes its automated form exactly. A biased human can be argued with. A biased system just returns a score.</p>
+    <p>And it cuts both ways in the digital world: older people depicted as digitally inept, their practices excluded from research, their faces underrepresented or misrepresented in media — <i>digital ageism</i> and <i>visual ageism</i>, now amplified by the systems that generate what everyone sees.</p>
+  </div>
+
+  <h2>What Ageism.ai does</h2>
+  <div class="grid3">
+    <div class="card">
+      <h3>Document</h3>
+      <p>A global case log of age bias in AI systems and ageist institutions, country by country — every case sourced, every claim checkable. The record nobody else is keeping.</p>
+    </div>
+    <div class="card">
+      <h3>Measure</h3>
+      <p>An annual index ranking countries and systems on AI age bias and on protections against it — published methodology, comparable year to year, built to be cited.</p>
+    </div>
+    <div class="card">
+      <h3>Mobilize</h3>
+      <p>A campaign in the frame of the UN Decade of Healthy Ageing, which runs through 2030: education, intergenerational contact, and policy — the three strategies the WHO finds actually work.</p>
+    </div>
+  </div>
+
+  <h2>Go-forward plan</h2>
+  <p class="sub">Worldwide is a claim to be earned, not a banner to be hung. The plan sequences the work so each phase funds the next one&rsquo;s credibility:</p>
+  <div class="phase">
+    <div class="num">Phase 1</div>
+    <div>
+      <h3>Document — the global case log</h3>
+      <p>Build the log first: verified cases of age bias in AI systems and ageist policy, organized by country, every case carrying its source. Start with English-language reporting and add regional sources deliberately — a worldwide log with one country&rsquo;s stories is a worldwide claim waiting to collapse. No case without a source, ever.</p>
+    </div>
+  </div>
+  <div class="phase">
+    <div class="num">Phase 2</div>
+    <div>
+      <h3>Measure — the Ageism.ai Index</h3>
+      <p>Publish the first annual index: countries ranked on documented AI age bias and on the strength of their protections, with the methodology published alongside the ranking so it can be challenged and improved. An index that can&rsquo;t be argued with isn&rsquo;t an index — it&rsquo;s a press release.</p>
+    </div>
+  </div>
+  <div class="phase">
+    <div class="num">Phase 3</div>
+    <div>
+      <h3>Mobilize — campaign and partners</h3>
+      <p>Take the evidence to the frame that already exists: the UN Decade of Healthy Ageing, through 2030. Regional partners, multilingual reach, and programs built on what works — education that dispels misconceptions, and intergenerational contact that is prepared, not incidental. Policy follows evidence; the log and the index are the evidence.</p>
+    </div>
+  </div>
+  <div class="callout">
+    <p><b>Three principles govern the whole plan.</b> Evidence first: nothing is published without a source. Global means global: coverage earns the claim, branding doesn&rsquo;t. Mission before brand: a worldwide banner with a thin mission reads as exploitation — so the mission stays thicker than the marketing.</p>
+  </div>
+
+  <div class="cta">
+    <h3>Follow the project.</h3>
+    <p>Get updates on the case log and the first Index. One email when there&rsquo;s something real to report — not a newsletter for its own sake.</p>
+    <form onsubmit="return false;">
+      <input type="email" placeholder="Email address" aria-label="Email address">
+      <button class="btn" type="submit">Follow</button>
+    </form>
+    <p class="note">Concept page — this form is a preview and doesn&rsquo;t submit yet. The log and the Index do not exist yet.</p>
+  </div>
+
+  <p class="sources">
+    Sources: World Health Organization, &ldquo;Ageing: Ageism&rdquo; (Q&amp;A) and <i>Global Report on Ageism</i> (2021); &ldquo;Ageism,&rdquo; Wikipedia; Kirsten Weir, &ldquo;Ageism is one of the last socially acceptable prejudices,&rdquo; <i>APA Monitor</i>, March 2023.
+  </p>
+
+  <footer>
+    <span>Ageism.ai · A global project concept</span>
+    <span>Part of Agentics Ventures</span>
+  </footer>
+
+</div>
+</body>
+</html>
